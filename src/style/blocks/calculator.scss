@@ -1,0 +1,91 @@
+.irs--round .irs-single {
+  background-color: $red;
+}
+
+.irs--round .irs-single:before {
+  position: absolute;
+  display: block;
+  content: "";
+  bottom: -20px; 
+  left: 50%;
+  height: 20px;
+  margin-left: -3px;
+  background-color: $red;
+  border-top-color: transparent;
+}
+
+.irs--round .irs-handle {
+  top: 26px;
+  width: 24px;
+  height: 24px;
+  border: 4px solid $red;
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 255, 0.3);
+}
+
+.irs--round .irs-bar {
+  top: 36px;
+  height: 4px;
+  background-color: $red;
+}
+
+.calculator {
+  background-color: $white;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  
+  @include onTablet {
+    padding: 50px 35px 30px;
+    gap: 35px;
+  }
+  
+  @include onDesktop {
+    padding: 104px 40px 40px;
+    gap: 50px;
+  }
+
+  &__slider{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__result {
+    display: flex;
+    align-self: center;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #C91C04 0%, #D81E05 33.33%, #4B0900 66.67%, #4B0900 100%);
+    padding: 20px 20px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: $white;
+    font-size: 16px;
+    line-height: 24px;
+    
+    @include onTablet {
+      padding: 20px 45px;
+      font-size: 18px;
+    }
+    
+    @include onDesktop {
+      padding: 20px 74px;
+      font-size: 20px;
+    }
+
+    &--sum {
+      font-size: 30px;
+      
+      @include onTablet {
+        font-size: 38px;
+      }
+      
+      @include onDesktop {
+        font-size: 44px;
+      }
+    }
+  }
+}

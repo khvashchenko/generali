@@ -1,0 +1,198 @@
+.ceo {
+  background: linear-gradient(180deg, #D81E05 0%, #490900 100%);
+  max-width: $desktopMinWidth;
+  margin-inline: auto;
+
+  &__container {
+    @include onTablet {
+      padding-top: 50px;
+    }
+    
+    @include onDesktop {
+      padding-top: 162px;
+    }
+  }
+  
+  &__person {
+    @include paddingInline;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    @include onTablet {
+      @media (min-width: 640px) and (max-width: 1000px){
+        flex-direction: column;
+      }
+
+      flex-direction: row;
+    }
+    
+    @include onDesktop {
+      align-items: start;
+      padding-inline: 0 60px;
+    }
+  }
+  
+  &__person-photo {
+    display: block;
+    padding-inline: 47px;
+    margin: 15px 40px 0;
+    position: relative;
+    top: 30px;
+
+    @include onTablet {
+      @media (min-width: 640px) and (max-width: 1000px){
+        width: 500px;
+        left: 0;
+      }
+      
+      width: 350px;
+      padding-inline: 0;
+      margin: 0;
+      left: 40px;
+    }
+    
+    @include onDesktop {
+      width: 500px;
+      margin: 0;
+      top: -90px;
+      left: 60px;
+      height: 100%;
+    }
+  }
+
+  &__person-article {
+    background-image: url(../src/images/bg_ceo.png);
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__person-text {
+    padding: 46px 34px 7px;
+    text-align: center;
+    font-weight: 600;
+    color: $white;
+    font-size: 20px;
+    line-height: 22px;
+
+    @include onTablet {
+      @media (min-width: 640px) and (max-width: 1000px){
+        padding: 40px 40px;
+      }
+      
+      text-align: left;
+      padding: 40px 30px 40px 70px;
+    }
+
+    @include onDesktop {
+      padding: 100px 27px 63px 92px;
+    }
+  }
+
+  &__profit {
+    @include paddingInline;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include onDesktop {
+      margin-top: 25px;
+    }
+  }
+
+  &__profit-title {
+    color: $white;
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 48px;
+  }
+
+  &__profit-tool {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 40px;
+
+    @include onTablet {
+      @media (min-width: 640px) and (max-width: 850px){
+        flex-direction: column;
+      }
+      
+      align-items: center;
+      gap: 40px;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__profit-calculator {
+    margin-top: 25px;
+    width: 100%;
+    
+    @include onTablet {
+      max-width: 690px;      
+    }
+  }
+
+  &__profit-results {
+    margin-top: 42px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    white-space: nowrap;
+    
+    @include onTablet {
+      @media (min-width: 640px) and (max-width: 850px){
+        text-align: center;
+      }
+      
+      text-align: left;
+      margin-top: 0;
+      gap: 30px;
+    }
+    
+    @include onDesktop {
+      gap: 40px;
+    }
+  }
+
+  &__profit-result {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    color: $white;
+    
+    @include onTablet {
+      gap: 0px;
+    }
+    
+    @include onDesktop {
+      gap: 16px;
+    }
+  }
+
+  &__profit-result-title {
+    font-style: 16px;
+    line-height: 20px;
+  }
+
+  &__profit-result-sum {
+    font-size: 42px;
+    line-height: 56px;
+    font-weight: 500;
+
+    @include onTablet {
+      @media (min-width: 640px) and (max-width: 850px){
+        font-size: 42px;
+      }
+      font-size: 30px;
+    }
+
+    @include onDesktop {
+      font-size: 42px;
+    }
+  }
+}

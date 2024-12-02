@@ -1,0 +1,109 @@
+.iti {
+  margin: auto;
+  width: 100%;
+}
+
+.iti__selected-country-primary {
+  display: flex;
+  height: 100%;
+  background-color: #d9d9d9;
+}
+
+.iti__country-container:not(:has(+ input[disabled])):not(
+    :has(+ input[readonly])
+  )button {
+  cursor: pointer;
+  background-color: #d9d9d9;
+}
+
+.error-border {
+  border: 1px solid $red;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 52px 27px 45px;
+  box-shadow: 0 4px 20px 4px #00000030;
+  border-radius: 15px;
+  font-family: 'Open Sans', sans-serif;
+
+  @include onTablet {
+    @media (min-width: 641px) and (max-width: 750px) {
+      margin-top: 30px;
+    }
+
+    grid-column: 2 / -1;
+    grid-row: 1 / -1;
+    margin-top: 0;
+  }
+
+  @include onDesktop {
+    position: absolute;
+    top: 79px;
+    right: 88px;
+    background-color: #4a4a4ad1;
+    width: 354px;
+  }
+
+  &__input {
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: $inputBg;
+    height: 40px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all $effectDuration;
+
+    &:hover {
+      background: $inputBgHover;
+    }
+
+    &:focus {
+      background: $inputBgHover;
+    }
+
+    @include onTablet {
+      text-align: left;
+      padding-left: 12px;
+    }
+  }
+
+  &__input-tel {
+    text-align: left;
+
+    @include onTablet {
+      text-align: left;
+      padding-left: 12px;
+    }
+  }
+
+  &__msg {
+    height: 20px;
+    font-size: 20px;
+    color: $red;
+    margin-top: 8px;
+    text-align: center;
+
+    @include onDesktop {
+      text-shadow: 1px 1px 1px $black;
+    }
+  }
+
+  &__btn {
+    margin-top: 52px;
+    height: 45px;
+    background-color: $red;
+    color: $white;
+    text-transform: uppercase;
+    border-radius: 4px;
+  }
+
+  &__btn.success {
+    border: 1px solid $red;
+    background-color: $white;
+    color: $red;
+  }
+}

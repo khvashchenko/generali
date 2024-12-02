@@ -1,13 +1,672 @@
 <!doctype html>
-<html lang="en">
+<html class="page" lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="./src/images/logos/logo_generali.png"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css"
+    />
+    <link rel="stylesheet" href="./src/style/main.scss" />
+    <title>Generali</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+    </style>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+  <body class="page__body">
+    <header class="header">
+      <div class="header__container top-bar">
+        <a class="top-bar__logo" href="#">
+          <img
+            class="top-bar__logo-img"
+            src="./src/images/logos/logo_generali.png"
+            alt="Logo"
+          />
+        </a>
+
+        <nav class="top-bar__nav">
+          <ul class="top-bar__list">
+            <li class="top-bar__item">
+              <a class="top-bar__link" href="#information">Informazioni</a>
+            </li>
+
+            <li class="top-bar__item">
+              <a class="top-bar__link" href="#ceo">CEO</a>
+            </li>
+
+            <li class="top-bar__item">
+              <a class="top-bar__link" href="#profit"
+                >Iniziare a guadagnare subito</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <a class="top-bar__open" href="#menu">
+          <img
+            class="top-bar__menu-icon"
+            src="./src/images/icons/menu_open.png"
+            alt="Open menu"
+          />
+        </a>
+      </div>
+    </header>
+
+    <aside class="menu page__menu" id="menu">
+      <div class="menu__container top-bar">
+        <div class="top-bar__container">
+          <a class="top-bar__logo" href="#">
+            <img
+              class="top-bar__logo-img"
+              src="./src/images/logos/logo_generali.png"
+              alt="Logo"
+            />
+          </a>
+
+          <a class="menu__close top-bar__menu" href="#">
+            <img
+              class="top-bar__menu-icon"
+              src="./src/images/icons/menu_close.png"
+              alt="Open menu"
+            />
+          </a>
+        </div>
+
+        <nav class="top-bar__nav menu__nav">
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="#information">Informazioni</a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#ceo">CEO</a>
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="#profit"
+                >Iniziare a guadagnare subito</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </aside>
+
+    <main>
+      <section class="information">
+        <div class="information__main">
+          <p class="information__main-text">
+            Investire 250 euro per raggiungere 5000 euro in una settimana vi
+            sembra impossibile?
+            <br />
+            Con il Gruppo Generali potete fare ancora di più!
+          </p>
+        </div>
+
+        <div class="information__rectangle" src="./src/images/rectangle.png"></div>
+
+        <form id="myForm" class="form information__form">
+          <input
+            id="firstName"
+            class="form__input"
+            type="text"
+            placeholder="il suo nome"
+          />
+
+          <input
+            id="lastName"
+            class="form__input"
+            type="text"
+            placeholder="il suo cog"
+          />
+
+          <input
+            id="email"
+            class="form__input"
+            type="email"
+            placeholder="e-mail"
+          />
+
+          <input id="phone" class="form__input form__input-tel" type="tel" />
+
+          <span id="error-msg" class="form__msg hide"></span>
+
+          <button id="btn" class="form__btn" type="submit">registrati</button>
+        </form>
+
+        <div class="information__description">
+          <div class="information__description-container">
+            <p class="information__description-title">IL NOSTRO SCOPO</p>
+
+            <p class="information__description-text">
+              Siamo qui per promuovere lo sviluppo e la circolazione delle
+              persone, delle imprese e del Paese.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="start" id="information">
+        <h1 class="start__title">Inizia a servire con noi</h1>
+
+        <div class="start__container">
+          <div class="start__item">
+            <img
+              src="./src/images/icons/icon_doc.png"
+              class="start__item-icon"
+              alt="Document"
+            />
+
+            <h2 class="start__item-title">Registrazione</h2>
+
+            <p class="start__item-text">
+              Compilare tutti i campi del modulo di registrazione sul sito web.
+            </p>
+
+            <a class="start__item-btn" href="#myForm">iniziare</a>
+          </div>
+
+          <div class="start__item-line"></div>
+
+          <div class="start__item">
+            <img
+              class="start__item-icon"
+              src="./src/images/icons/icon_detective.png"
+              alt="Detective"
+            />
+
+            <h2 class="start__item-title">Consultazione di esperti</h2>
+
+            <p class="start__item-text">
+              Dopo la registrazione, rispondere all'invito del Consulente di
+              supporto di Petrol Energia e seguire tutte le sue istruzioni.
+            </p>
+
+            <a class="start__item-btn" href="#myForm">iniziare</a>
+          </div>
+
+          <div class="start__item-line"></div>
+
+          <div class="start__item">
+            <img
+              class="start__item-icon"
+              src="./src/images/icons/icon_tree.png"
+              alt="Tree"
+            />
+
+            <h2 class="start__item-title">Deposito</h2>
+
+            <p class="start__item-text">
+              Dopo la verifica, è necessario depositare un minimo di 250 euro
+              sul conto dell'azionista.
+            </p>
+
+            <a class="start__item-btn" href="#myForm">iniziare</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="ceo" id="ceo">
+        <div class="ceo__container">
+          <div class="ceo__person">
+            <img
+              class="ceo__person-photo"
+              src="./src/images/photos/photo_Philippe_Donnet.png"
+              alt="Photo Philippe Donnet"
+            />
+
+            <div class="ceo__person-article">
+              <p class="ceo__person-text">
+                Philippe Donnet, amministratore delegato di Generali, ha appena
+                festeggiato dieci anni in Italia e in un’intervista a
+                “Repubblica” spiega che bilancio trae dal nostro Paese: “In
+                questi dieci anni il mondo ha dovuto fare i conti con prove
+                molto dure e questo ci ha resi più capaci di gestire
+                l’imprevedibile. L’Italia ha resistito bene. Per quanto mi
+                riguarda, tre anni fa sono diventato cittadino italiano: perché
+                ci tenevo a rimarcare un’adesione forte ai valori e alla cultura
+                di questo Paese”. Un’altra prova per l’economia è stato il
+                repentino rialzo dei tassi: “A mio parere è improprio parlare
+                oggi di tassi alti: quando ero teenager, i mutui viaggiavano a
+                due cifre percentuali. La vera anomalia è stata vivere con tassi
+                a zero per quindici anni. Oggi siamo in una situazione normale.
+                Per quel che riguarda il nostro gruppo, abbiamo un business mix
+                grazie al quale possiamo crescere in qualsiasi ciclo economico”.
+                La crescita dell’Italia è stimata attorno allo 0,7 per cento:
+                “Noi non avremo problemi ma per la crescita si può fare meglio,
+                in Italia e in Europa. Ritengo che in Europa non ci sia
+                abbastanza Europa, ma troppe tasse e troppe norme, che si
+                sovrappongono a quelle nazionali. Questo non aiuta né le
+                famiglie né le imprese: quindi abbassiamo le tasse, riduciamo le
+                norme e liberiamo le energie imprenditoriali”.
+              </p>
+            </div>
+          </div>
+
+          <div class="ceo__profit" id="profit">
+            <h2 class="ceo__profit-title">Potencijal dobiti</h2>
+
+            <div class="ceo__profit-tool">
+              <div class="ceo__profit-calculator calculator">
+                <div class="calculator__slider">
+                  <input
+                    type="text"
+                    class="js-range-slider calculator__month"
+                    name="my_range"
+                    value=""
+                  />
+
+                  <input
+                    type="text"
+                    class="js-range-slider calculator__money"
+                    name="my_range"
+                    value=""
+                  />
+                </div>
+
+                <p class="calculator__result">
+                  MOGUĆA DOBIT: &nbsp;
+
+                  <span class="calculator__result--sum"> 0 </span>
+                </p>
+              </div>
+
+              <div class="ceo__profit-results">
+                <div class="ceo__profit-result ceo__profit-result--total">
+                  <p
+                    class="ceo__profit-result-title ceo__profit-result-title--total"
+                  >
+                    UKUPNA DOBIT KORISNIKA:
+                  </p>
+
+                  <p
+                    class="ceo__profit-result-sum ceo__profit-result-sum--total"
+                  >
+                    € 128 567 000
+                  </p>
+                </div>
+
+                <div class="ceo__profit-result ceo__profit-result--users">
+                  <p
+                    class="ceo__profit-result-title ceo__profit-result-title--users"
+                  >
+                    AKTIVNI KORISNICI:
+                  </p>
+
+                  <p
+                    class="ceo__profit-result-sum ceo__profit-result-sum--users"
+                  >
+                    77 335
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="swiper-slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-slide__top">
+                <img
+                  class="swiper-slide__photo"
+                  src="./src/images/photos/photo_1.png"
+                  alt="Jeff Bezos"
+                />
+
+                <div class="swiper-slide__person-data">
+                  <h2 class="swiper-slide__name">Jeff Bezos:</h2>
+
+                  <p class="swiper-slide__post">
+                    Technologieunternehmer, Investor und Philanthrop
+                  </p>
+
+                  <a
+                    href="https://www.facebook.com/"
+                    class="swiper-slide__fb-link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./src/images/icons/fb_icon.png"
+                      alt="facebook profile"
+                      class="swiper-slide__bg-img"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <p class="swiper-slide__description">
+                Dem Quantencomputing gehört die Zukunft. Ich übertreibe nicht,
+                wenn ich sage, es wird alles verändern wird. Das
+                Quantencomputing steht noch ganz am Anfang; nicht viele Menschen
+                wissen davon, was bedeutet, dass nur sehr wenige es nutzen. Die
+                wenigen, die es nutzen, treffen unglaublich kluge (und
+                profitable) Entscheidungen.
+              </p>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-slide__top">
+                <img
+                  src="./src/images/photos/photo_2.png"
+                  alt="Bill Gates"
+                  class="swiper-slide__photo"
+                />
+
+                <div class="swiper-slide__person-data">
+                  <h2 class="swiper-slide__name">Bill Gates:</h2>
+
+                  <p class="swiper-slide__post">
+                    Wirtschaftsmagnat, Investor, Autor, Philanthrop und
+                    Menschenfreund
+                  </p>
+
+                  <a
+                    href="https://www.facebook.com/"
+                    class="swiper-slide__fb-link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./src/images/icons/fb_icon.png"
+                      alt="facebook profile"
+                      class="swiper-slide__bg-img"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <p class="swiper-slide__description">
+                Ich weiß mit Sicherheit, dass Elon 3 Milliarden Dollar von
+                seinem eigenen Geld ausgegeben hat, um dieses Programm zu
+                finanzieren. Hut ab vor ihm - das sind 3 Milliarden Dollar von
+                seinem eigenen Geld, um eine bessere Zukunft für alle zu
+                finanzieren und um anderen zu helfen Gewinne zu machen.
+              </p>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-slide__top">
+                <img
+                  src="./src/images/photos/photo_3.png"
+                  alt="Elon Mask"
+                  class="swiper-slide__photo"
+                />
+
+                <div class="swiper-slide__person-data">
+                  <h2 class="swiper-slide__name">Elon Mask:</h2>
+
+                  <p class="swiper-slide__post">
+                    Technologieunternehmer, Investor und Philanthrop
+                  </p>
+
+                  <a
+                    href="https://www.facebook.com/"
+                    class="swiper-slide__fb-link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./src/images/icons/fb_icon.png"
+                      alt="facebook profile"
+                      class="swiper-slide__bg-img"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <p class="swiper-slide__description">
+                Dem Quantencomputing gehört die Zukunft. Ich übertreibe nicht,
+                wenn ich sage, es wird lles verändern wird. Das Quantencomputing
+                steht noch ganz am Anfang; nicht viele enschen wissen davon, was
+                bedeutet, dass nur sehr wenige es nutzen. Die wenigen, die s
+                nutzen, treffen unglaublich kluge (und profitable)
+                Entscheidungen.
+              </p>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-slide__top">
+                <img
+                  src="./src/images/photos/photo_4.png"
+                  alt="Steve Wozniak"
+                  class="swiper-slide__photo"
+                />
+
+                <div class="swiper-slide__person-data">
+                  <h2 class="swiper-slide__name">Steve Wozniak:</h2>
+
+                  <p class="swiper-slide__post">
+                    Wirtschaftsmagnat, Investor, Autor, Philanthrop und
+                    Menschenfreund
+                  </p>
+
+                  <a
+                    href="https://www.facebook.com/"
+                    class="swiper-slide__fb-link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./src/images/icons/fb_icon.png"
+                      alt="facebook profile"
+                      class="swiper-slide__bg-img"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <p class="swiper-slide__description">
+                Ich weiß mit Sicherheit, dass Elon 3 Milliarden Dollar von
+                seinem eigenen Geld ausgegeben hat, um dieses Programm zu
+                finanzieren. Hut ab vor ihm - das sind 3 Milliarden Dollar von
+                seinem eigenen Geld, um eine bessere Zukunft für alle zu
+                finanzieren und um anderen zu helfen Gewinne zu machen.
+              </p>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-slide__top">
+                <img
+                  src="./src/images/photos/photo_5.png"
+                  alt="Linus Benedict Torvalds"
+                  class="swiper-slide__photo"
+                />
+
+                <div class="swiper-slide__person-data">
+                  <h2 class="swiper-slide__name">Linus Benedict Torvalds:</h2>
+
+                  <p class="swiper-slide__post">
+                    Technologieunternehmer, Investor und Philanthrop
+                  </p>
+
+                  <a
+                    href="https://www.facebook.com/"
+                    class="swiper-slide__fb-link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./src/images/icons/fb_icon.png"
+                      alt="facebook profile"
+                      class="swiper-slide__bg-img"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <p class="swiper-slide__description">
+                Dem Quantencomputing gehört die Zukunft. Ich übertreibe nicht,
+                wenn ich sage, es wird alles verändern wird. Das
+                Quantencomputing steht noch ganz am Anfang; nicht viele Menschen
+                wissen davon, was bedeutet, dass nur sehr wenige es nutzen. Die
+                wenigen, die es nutzen, treffen unglaublich kluge (und
+                profitable) Entscheidungen.
+              </p>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="swiper-slide__top">
+                <img
+                  src="./src/images/photos/photo_Philippe_Donnet.png"
+                  alt="Linus Benedict Torvalds"
+                  class="swiper-slide__photo"
+                />
+
+                <div class="swiper-slide__person-data">
+                  <h2 class="swiper-slide__name">John Carmack:</h2>
+
+                  <p class="swiper-slide__post">
+                    Wirtschaftsmagnat, Investor, Autor, Philanthrop und
+                    Menschenfreund
+                  </p>
+
+                  <a
+                    href="https://www.facebook.com/"
+                    class="swiper-slide__fb-link"
+                    target="_blank"
+                  >
+                    <img
+                      src="./src/images/icons/fb_icon.png"
+                      alt="facebook profile"
+                      class="swiper-slide__bg-img"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <p class="swiper-slide__description">
+                Ich weiß mit Sicherheit, dass Elon 3 Milliarden Dollar von
+                seinem eigenen Geld ausgegeben hat, um dieses Programm zu
+                finanzieren. Hut ab vor ihm - das sind 3 Milliarden Dollar von
+                seinem eigenen Geld, um eine bessere Zukunft für alle zu
+                finanzieren und um anderen zu helfen Gewinne zu machen.
+              </p>
+            </div>
+          </div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+
+      <section class="shareholders">
+        <h2 class="shareholders__title">Gli azionisti dell'azienda</h2>
+
+        <div class="shareholders__logo-container">
+          <div class="shareholders__logo-top-block">
+            <a
+              class="shareholders__logo-link"
+              href="https://www.mediobancapb.com"
+              target="_blank"
+            >
+              <img
+                class="shareholders__logo-img"
+                src="./src/images/logos/logo_mediobanca.png"
+                alt="Mediobanca"
+              />
+            </a>
+
+            <a
+              class="shareholders__logo-link"
+              href="https://www.unicreditgroup.eu"
+              target="_blank"
+            >
+              <img
+                class="shareholders__logo-img"
+                src="./src/images/logos/logo_unicredit.png"
+                alt="Unicredit"
+              />
+            </a>
+
+            <a
+              class="shareholders__logo-link"
+              href="https://www.bancaditalia.it/"
+              target="_blank"
+            >
+              <img
+                class="shareholders__logo-img"
+                src="./src/images/logos/logo_banca-d-italia.png"
+                alt="Banca d Italia"
+              />
+            </a>
+          </div>
+
+          <div class="shareholders__logo-bottom-block">
+            <a
+              class="shareholders__logo-link"
+              href="https://bndholdings.com/"
+              target="_blank"
+            >
+              <img
+                class="shareholders__logo-img"
+                src="./src/images/logos/logo_b&d.png"
+                alt="B&D holding"
+              />
+            </a>
+
+            <a
+              class="shareholders__logo-link"
+              href="https://www.carlotassara.it/"
+              target="_blank"
+            >
+              <img
+                class="shareholders__logo-img"
+                src="./src/images/logos/logo_carlo.png"
+                alt="Carlo Tassara"
+              />
+            </a>
+
+            <a
+              class="shareholders__logo-link"
+              href="https://denys-khvashchenko.github.io/landing-page_generali/"
+              target="_blank"
+            >
+              <img
+                class="shareholders__logo-img"
+                src="./src/images/logos/logo_generali.png"
+                alt="Generali"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="footer__logo" href="#">
+        <img
+          class="footer__logo-img"
+          src="./src/images/logos/logo_generali.png"
+          alt="Generali"
+        />
+      </a>
+
+      <div class="footer__links">
+        <a href="#" class="footer__link">Mappa del sito</a>
+
+        <a href="#" class="footer__link">Termini di utilizzo</a>
+
+        <a href="#" class="footer__link">Avviso di accessibilità</a>
+
+        <a href="#" class="footer__link">Gestione dei Cookie</a>
+
+        <a href="#" class="footer__link"
+          >Politica sulla protezione dei dati e informativa sulla privacy</a
+        >
+
+        <a href="#" class="footer__link">Avviso di frode Web e phishing</a>
+
+        <a href="#" class="footer__link">Politica sui reclami – Australia</a>
+      </div>
+    </footer>
+
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>
