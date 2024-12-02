@@ -1,6 +1,9 @@
 import { defineConfig } from 'vite';
+import path from 'path';
 
 export default defineConfig({
+  base: '/generali',
+
   server: {
     host: true, 
     port: 3000,
@@ -10,8 +13,9 @@ export default defineConfig({
     },
   },
   
-  build: {
-    outDir: 'dist', 
-    sourcemap: true,
-  }
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
 });
