@@ -31,7 +31,7 @@
 
     @include onDesktop {
       display: flex;
-      background-image: url(../src/images/main_img_generali.png);
+      background-image: url(../../../src/images/main_img_generali.png);
       background-repeat: no-repeat;
       background-position: right;
       justify-content: start;
@@ -103,7 +103,7 @@
 
     @include onDesktop {
       margin-top: 75px;
-      background-image: url(../src/images/rectangle_number_two.png);
+      background-image: url(../../../src/images/rectangle_number_two.png);
       background-repeat: no-repeat;
       height: 223px;
       margin-inline: 88px;
