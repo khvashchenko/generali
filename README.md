@@ -25,7 +25,7 @@ I hope you enjoy my project!
   - [Swiper](https://swiperjs.com/)
 
 ## Preview
-- [Genetali landing preview](https://khvashchenko.github.io/landing-page_generali/)
+- [Genetali landing preview](https://khvashchenko.github.io/generali/)
 
 ## Mockup
   - [Generali mockup](https://www.figma.com/design/M56AjToDTgoYn36M913oej/Untitled?node-id=0-1&node-type=canvas&t=g6v3hmc9iWitswq2-0)
