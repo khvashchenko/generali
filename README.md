@@ -1,7 +1,7 @@
 # Generali landing page
 
 ## Project Presentation
-Hello! I would like to present my test project, in which I implemented a responsive website using modern libraries and technologies.
+Hello! I would like to present my project, in which I implemented a responsive website using modern libraries and technologies.
 
 **Key Features of the Project:**
 
